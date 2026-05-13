@@ -29,10 +29,6 @@ namespace Tubes_KPL.Models
             $"{Nama} ({Tipe}) - Bobot: {Bobot:P0}";
     }
 
-    /// <summary>
-    /// Represents a grade entry for one student on one component.
-    /// FR-004: Validasi Nilai enforced here.
-    /// </summary>
     public class NilaiMahasiswa
     {
         public int Id { get; set; }
