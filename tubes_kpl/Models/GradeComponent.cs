@@ -34,19 +34,14 @@ namespace Tubes_KPL.Models
         public int Id { get; set; }
         public int MahasiswaId { get; set; }
         public int KomponenId { get; set; }
-        public double Nilai { get; set; }         // 0 - 100
+        public double Nilai { get; set; }     
         public string Keterangan { get; set; } = string.Empty;
         public DateTime EnteredAt { get; set; } = DateTime.Now;
         public int EnteredById { get; set; }
 
-        // NFR-006: Nilai harus dalam rentang 0–100
         public bool IsValid() => Nilai >= 0 && Nilai <= 100;
     }
 
-    /// <summary>
-    /// Aggregated result per student per course.
-    /// FR-005: Perhitungan otomatis nilai akhir.
-    /// </summary>
     public class HasilAkhir
     {
         public int MahasiswaId { get; set; }
@@ -55,7 +50,7 @@ namespace Tubes_KPL.Models
         public string MataKuliahId { get; set; } = string.Empty;
         public string NamaMataKuliah { get; set; } = string.Empty;
         public double NilaiAkhir { get; set; }
-        public string Grade { get; set; } = string.Empty;   // A, B, C, D, E
+        public string Grade { get; set; } = string.Empty;  
 
         public static string HitungGrade(double nilai) => nilai switch
         {
