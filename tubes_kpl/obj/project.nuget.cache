@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "7UBAZoP37co=",
   "success": true,
   "projectFilePath": "C:\\Users\\MSCRuser\\source\\repos\\tubes_KPL\\Tubes_KPL\\Tubes_KPL.csproj",
+=======
+  "dgSpecHash": "Qjfwzookt7o=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\tubes_kpl\\Tubes_KPL\\Tubes_KPL.csproj",
+>>>>>>> origin/master
   "expectedPackageFiles": [
     "C:\\Users\\MSCRuser\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\MSCRuser\\.nuget\\packages\\microsoft.data.sqlite\\10.0.8\\microsoft.data.sqlite.10.0.8.nupkg.sha512",

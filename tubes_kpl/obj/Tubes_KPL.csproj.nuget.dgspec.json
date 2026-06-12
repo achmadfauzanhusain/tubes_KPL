@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\MSCRuser\\source\\repos\\tubes_KPL\\Tubes_KPL\\Tubes_KPL.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\MSCRuser\\source\\repos\\tubes_KPL\\Tubes_KPL\\Tubes_KPL.csproj",
         "packagesPath": "C:\\Users\\MSCRuser\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\MSCRuser\\source\\repos\\tubes_KPL\\Tubes_KPL\\obj\\",
+=======
+    "C:\\Users\\LENOVO\\source\\repos\\tubes_kpl\\Tubes_KPL\\Tubes_KPL.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\LENOVO\\source\\repos\\tubes_kpl\\Tubes_KPL\\Tubes_KPL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\tubes_kpl\\Tubes_KPL\\Tubes_KPL.csproj",
+        "projectName": "Tubes_KPL",
+        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\tubes_kpl\\Tubes_KPL\\Tubes_KPL.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\tubes_kpl\\Tubes_KPL\\obj\\",
+>>>>>>> origin/master
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
