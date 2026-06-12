@@ -386,23 +386,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
+    "C:\\Users\\MSCRuser\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\Tubes_KPL\\Tubes_KPL\\Tubes_KPL.csproj",
+      "projectUniqueName": "C:\\Users\\MSCRuser\\source\\repos\\tubes_KPL\\Tubes_KPL\\Tubes_KPL.csproj",
       "projectName": "Tubes_KPL",
-      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Tubes_KPL\\Tubes_KPL\\Tubes_KPL.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\Tubes_KPL\\Tubes_KPL\\obj\\",
+      "projectPath": "C:\\Users\\MSCRuser\\source\\repos\\tubes_KPL\\Tubes_KPL\\Tubes_KPL.csproj",
+      "packagesPath": "C:\\Users\\MSCRuser\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MSCRuser\\source\\repos\\tubes_KPL\\Tubes_KPL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MSCRuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -415,7 +415,6 @@
       },
       "frameworks": {
         "net10.0-windows7.0": {
-          "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
           "projectReferences": {}
         }
@@ -434,7 +433,6 @@
     },
     "frameworks": {
       "net10.0-windows7.0": {
-        "framework": "net10.0-windows7.0",
         "targetAlias": "net10.0-windows",
         "dependencies": {
           "BCrypt.Net-Next": {
@@ -469,7 +467,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
