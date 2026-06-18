@@ -41,4 +41,15 @@ namespace Tubes_KPL.Contracts
         Task<bool> MarkAsReadAsync(int notifikasiId);
         Task<int> GetUnreadCountAsync(int userId);
     }
+
+    // REST API layer interface (API technique)
+    // Nasywa Azalia Andrean
+    public interface IApiService
+    {
+        Task<T?> GetAsync<T>(string endpoint);
+        Task<TResponse?> PostAsync<TRequest, TResponse>(string endpoint, TRequest payload);
+        Task<bool> PutAsync<T>(string endpoint, T payload);
+        Task<bool> DeleteAsync(string endpoint);
+        void SetAuthToken(string token);
+    }
 }
