@@ -9,11 +9,13 @@
 //         Design by Contract (DbC) - validasi input
 // ============================================================
 
-using System.Diagnostics;
-using System.Diagnostics.Contracts;
 using ManajemenNilai.Contracts;
 using ManajemenNilai.Infrastructure;
 using ManajemenNilai.Models;
+using System.Diagnostics;
+using System.Diagnostics.Contracts;
+using Tubes_KPL.Contracts;
+using Tubes_KPL.Models;
 
 namespace ManajemenNilai.Services;
 
@@ -260,14 +262,12 @@ public class GradeService : IGradeService
                 // Kirim notifikasi ke semua mahasiswa
                 using var notifCmd = conn.CreateCommand();
                 notifCmd.CommandText = @"
-                INSERT INTO Notifikasi (UserId, Judul, Pesan, Kategori)
-                SELECT u.Id,
-                       'Nilai Baru Dipublikasikan',
-                       'Dosen telah mempublikasikan komponen nilai baru. Silakan cek nilai Anda.',
-                       'Nilai'
-                FROM Users u
-                WHERE u.Role = 1 AND u.IsActive = 1";
-
+                    INSERT INTO Notifikasi (UserId, Judul, Pesan, Kategori)
+                    SELECT u.Id,
+                           'Nilai Baru Dipublikasikan',
+                           'Dosen telah mempublikasikan komponen nilai baru. Silakan cek nilai Anda.',
+                           'Nilai'
+                    FROM Users u WHERE u.Role = 1 AND u.IsActive = 1";
                 notifCmd.ExecuteNonQuery();
             }
             return ok;
