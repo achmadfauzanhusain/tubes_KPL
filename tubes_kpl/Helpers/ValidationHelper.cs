@@ -1,4 +1,8 @@
-﻿using System;
+// Helpers/ValidationHelper.cs
+// FR-004: Validasi Nilai
+// Teknik: Code Reuse/Library - Laksamana Dwi Daffa - Annisa Azzahra Putri - Nasywa Azalia Andrean
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
