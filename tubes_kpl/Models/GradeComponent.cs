@@ -1,9 +1,8 @@
-﻿// ============================================================
+
 // Models/GradeComponent.cs
 // FR-002: Pengelolaan Komponen Nilai
 // FR-005: Perhitungan Otomatis
 // Teknik: Table-Driven Construction - Muhammad Aditya Arham - Annisa Azzahra Putri - Nasywa Azalia Andrean
-// ============================================================
 
 namespace Tubes_KPL.Models;
 
