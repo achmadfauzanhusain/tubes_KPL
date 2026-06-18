@@ -5,6 +5,14 @@ using Tubes_KPL.Models;
 
 namespace Tubes_KPL.Contracts
 {
+    public interface IAuthService
+    {
+        Task<User?> LoginAsync(string nimNip, string password);
+        Task<bool> LogoutAsync(int userId);
+        bool IsAuthenticated { get; }
+        User? CurrentUser { get; }
+    }
+
     // FR-001, FR-002, FR-003, FR-004, FR-005
     // Muhammad Aditya Arham
     internal interface IGradeService
