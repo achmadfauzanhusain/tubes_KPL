@@ -19,6 +19,21 @@ public static class ValidationHelper
         }
         return ValidationResult.Ok();
     }
+
+    public static ValidationResult ValidateBobot(double bobot)
+    {
+        return (bobot >= 0.0 && bobot <= 1.0)
+            ? ValidationResult.Ok()
+            : ValidationResult.Fail("Bobot tidak valid.");
+    }
+
+    public static ValidationResult ValidateTotalBobot(IEnumerable<double> bobotKomponen)
+    {
+        return Math.Abs(bobotKomponen.Sum() - 1.0) < 0.0001
+            ? ValidationResult.Ok()
+            : ValidationResult.Fail("Total bobot tidak valid.");
+    }
+}
 }
 
 public class ValidationResult
