@@ -1,7 +1,3 @@
-// Helpers/ValidationHelper.cs
-// FR-004: Validasi Nilai
-// Teknik: Code Reuse/Library - Laksamana Dwi Daffa - Annisa Azzahra Putri - Nasywa Azalia Andrean
-
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -33,7 +29,47 @@ public static class ValidationHelper
             ? ValidationResult.Ok()
             : ValidationResult.Fail("Total bobot tidak valid.");
     }
-}
+
+    public static ValidationResult ValidateNIM(string nim)
+    {
+        if (string.IsNullOrWhiteSpace(nim))
+            return ValidationResult.Fail("NIM tidak boleh kosong");
+
+        if (!nim.All(char.IsDigit))
+            return ValidationResult.Fail("NIM hanya boleh berisi angka");
+
+        return ValidationResult.Ok();
+    }
+
+    public static ValidationResult ValidateNilai(double nilai)
+    {
+        if (nilai < 0 || nilai > 100)
+            return ValidationResult.Fail("Nilai harus antara 0-100");
+
+        return ValidationResult.Ok();
+    }
+
+    public static ValidationResult ValidateEmail(string email)
+    {
+        if (string.IsNullOrWhiteSpace(email))
+            return ValidationResult.Fail("Email tidak boleh kosong");
+
+        if (!email.Contains("@") || !email.Contains("."))
+            return ValidationResult.Fail("Format email tidak valid");
+
+        return ValidationResult.Ok();
+    }
+
+    public static ValidationResult ValidatePassword(string password)
+    {
+        if (string.IsNullOrWhiteSpace(password))
+            return ValidationResult.Fail("Password tidak boleh kosong");
+
+        if (password.Length < 6)
+            return ValidationResult.Fail("Password minimal 6 karakter");
+
+        return ValidationResult.Ok();
+    }
 }
 
 public class ValidationResult
