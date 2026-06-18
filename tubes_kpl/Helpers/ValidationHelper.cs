@@ -16,20 +16,7 @@ public static class ValidationHelper
         return ValidationResult.Ok();
     }
 
-
-public class ValidationResult
-{
-    public bool IsValid { get; private set; }
-    public string ErrorMessage { get; private set; } = string.Empty;
-
-    public static ValidationResult Ok() => new() { IsValid = true };
-    public static ValidationResult Fail(string message) =>
-        new() { IsValid = false, ErrorMessage = message };
-
-    public override string ToString() => IsValid ? "Valid" : ErrorMessage;
-
-}
-public static ValidationResult ValidateNIM(string nim)
+    public static ValidationResult ValidateNIM(string nim)
     {
         if (string.IsNullOrWhiteSpace(nim))
             return ValidationResult.Fail("NIM tidak boleh kosong");
@@ -69,4 +56,16 @@ public static ValidationResult ValidateNIM(string nim)
 
         return ValidationResult.Ok();
     }
+}
+
+public class ValidationResult
+{
+    public bool IsValid { get; private set; }
+    public string ErrorMessage { get; private set; } = string.Empty;
+
+    public static ValidationResult Ok() => new() { IsValid = true };
+    public static ValidationResult Fail(string message) =>
+        new() { IsValid = false, ErrorMessage = message };
+
+    public override string ToString() => IsValid ? "Valid" : ErrorMessage;
 }
