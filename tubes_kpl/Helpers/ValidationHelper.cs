@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Tubes_KPL.Helpers
 {
-    internal class ValidationHelper
+    public static class ValidationHelper
     {
+    }
+
+    public class ValidationResult
+    {
+        
     }
 }
