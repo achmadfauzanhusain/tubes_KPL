@@ -1,4 +1,8 @@
-﻿using System;
+// Helpers/ReportHelper.cs
+// FR-006: Pelaporan Nilai
+// Teknik: Code Reuse/Library - Laksamana Dwi Daffa
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
