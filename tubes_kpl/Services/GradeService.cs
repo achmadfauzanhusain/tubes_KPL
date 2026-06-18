@@ -1,4 +1,4 @@
-﻿// ============================================================
+
 // Services/GradeService.cs
 // FR-002: Pengelolaan Komponen Nilai
 // FR-004: Validasi Nilai
@@ -7,7 +7,7 @@
 // FR-007: Publikasi Bertahap
 // Teknik: Table-Driven Construction - Muhammad Aditya Arham
 //         Design by Contract (DbC) - validasi input
-// ============================================================
+
 
 using ManajemenNilai.Contracts;
 using ManajemenNilai.Infrastructure;
@@ -21,10 +21,10 @@ namespace ManajemenNilai.Services;
 
 public class GradeService : IGradeService
 {
-    // ============================================================
+    
     // TABLE-DRIVEN: Tabel bobot minimum per tipe komponen
     // Data dikonfigurasi sebagai tabel, bukan hardcoded di logika
-    // ============================================================
+    
     private static readonly Dictionary<KomponenType, (double MinBobot, double MaxBobot, string Description)>
         KomponenRules = new()
         {
@@ -143,11 +143,9 @@ public class GradeService : IGradeService
             return list;
         });
     }
-
-    /// <summary>
+    
     /// TABLE-DRIVEN: Gunakan GradeTable untuk tentukan grade
     /// DbC: Pastikan total bobot valid sebelum kalkulasi
-    /// </summary>
     public async Task<HasilAkhir> HitungNilaiAkhirAsync(int mahasiswaId, string mkId)
     {
         return await Task.Run(() =>
@@ -208,9 +206,7 @@ public class GradeService : IGradeService
         });
     }
 
-    /// <summary>
     /// DbC: Precondition - nilai harus valid (0-100), komponen harus ada
-    /// </summary>
     public async Task<bool> InputNilaiAsync(NilaiMahasiswa nilai)
     {
         // DbC Preconditions
@@ -240,10 +236,8 @@ public class GradeService : IGradeService
     public async Task<bool> UpdateNilaiAsync(NilaiMahasiswa nilai) =>
         await InputNilaiAsync(nilai);
 
-    /// <summary>
     /// FR-007: Publikasi Bertahap
     /// Notifikasi dikirim ke semua mahasiswa yang terdaftar
-    /// </summary>
     public async Task<bool> PublishKomponenAsync(int komponenId)
     {
         return await Task.Run(() =>
