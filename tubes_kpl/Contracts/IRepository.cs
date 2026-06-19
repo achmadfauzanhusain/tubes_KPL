@@ -1,10 +1,7 @@
-// ============================================================
-// Contracts/IRepository.cs
 // Teknik: Parameterization/Generics - Salman Al Farizin - Nasywa Azalia Andrean
 // Generic repository interface reusable untuk semua model
-// ============================================================
 
-namespace ManajemenNilai.Contracts;
+namespace Tubes_KPL.Contracts;
 
 /// <summary>
 /// Generic repository contract.
