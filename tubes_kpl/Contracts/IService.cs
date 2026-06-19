@@ -1,10 +1,15 @@
-﻿using System;
+// Contracts/IServices.cs - Achmad Fauzan Husain - Muhammad Aditya Arham - Nasywa Azalia Andrean
+// Service layer contracts / interfaces
+
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Tubes_KPL.Models;
 
 namespace Tubes_KPL.Contracts
 {
+    // Login SSO
+    // Achmad Fauzan Husain
     public interface IAuthService
     {
         Task<User?> LoginAsync(string nimNip, string password);
