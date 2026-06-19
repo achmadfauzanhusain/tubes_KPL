@@ -3,12 +3,12 @@
 // Dashboard utama (Dosen) - menampilkan semua fitur
 // ============================================================
 
-using ManajemenNilai.Contracts;
-using ManajemenNilai.Helpers;
-using ManajemenNilai.Models;
-using ManajemenNilai.Services;
+using Tubes_KPL.Contracts;
+using Tubes_KPL.Helpers;
+using Tubes_KPL.Models;
+using Tubes_KPL.Services;
 
-namespace ManajemenNilai.Forms;
+namespace Tubes_KPL.Forms;
 
 public class MainForm : Form
 {
