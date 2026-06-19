@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 // Infrastructure/DatabaseContext.cs
 // Local SQLite database setup (untuk development/demo)
 // ============================================================
@@ -167,18 +167,18 @@ public sealed class DatabaseContext
 
             INSERT INTO Users (NIM_NIP, Nama, Email, PasswordHash, Role, Kelas, Program, AngkatanTahun)
             VALUES
-            ('1302220142', 'Muhammad Rafi Nadhif', 'rafi@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Informatika', 2022),
-            ('103022400104', 'Muhammad Aditya Arham', 'aditya@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Informatika', 2022),
-            ('103022400101', 'Salman Al Farizin', 'salman@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Informatika', 2022),
-            ('103022400139', 'Laksamana Dwi Daffa', 'daffa@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Informatika', 2022),
-            ('103022400033', 'Annisa Azzahra Putri', 'annisa@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Informatika', 2022),
-            ('103022400050', 'Ahmad Fajar Rizki', 'fajar@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Informatika', 2022);
+            ('103022400039', 'Achmad Fauzan Husain', 'achmadfauzanhusain@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Rekayasa Perangkat Lunak', 2024),
+            ('103022400104', 'Muhammad Aditya Arham', 'aditya@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Rekayasa Perangkat Lunak', 2022),
+            ('103022400101', 'Salman Al Farizin', 'salman@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Rekayasa Perangkat Lunak', 2022),
+            ('103022400139', 'Laksamana Dwi Daffa', 'daffa@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Rekayasa Perangkat Lunak', 2022),
+            ('103022400033', 'Annisa Azzahra Putri', 'annisa@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Rekayasa Perangkat Lunak', 2022),
+            ('103022400050', 'Nasywa Azalia Andrean', 'nasywa@student.telkomuniversity.ac.id', '{mhsHash}', 1, 'IF-46-02', 'S1 Rekayasa Perangkat Lunak', 2022);
 
             INSERT INTO MataKuliah (Id, Nama, SKS, DosenId, Kelas, Semester)
             VALUES
-            ('IF3110', 'Rekayasa Perangkat Lunak', 3, '198501012010011001', 'IF-46-02', 'Ganjil 2024/2025'),
-            ('IF3120', 'Basis Data', 3, '198501012010011001', 'IF-46-02', 'Ganjil 2024/2025'),
-            ('IF3130', 'Jaringan Komputer', 2, '198703152012012002', 'IF-46-02', 'Ganjil 2024/2025');
+            ('IF3110', 'DasJarkom', 3, '198501012010011001', 'IF-46-02', 'Ganjil 2024/2025'),
+            ('IF3120', 'KPL', 3, '198501012010011001', 'IF-46-02', 'Ganjil 2024/2025'),
+            ('IF3130', 'BasDat', 2, '198703152012012002', 'IF-46-02', 'Ganjil 2024/2025');
 
             INSERT INTO GradeComponents (MataKuliahId, Nama, Tipe, Bobot, Pertemuan, IsPublished)
             VALUES
