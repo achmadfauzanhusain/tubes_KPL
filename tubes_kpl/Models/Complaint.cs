@@ -3,7 +3,7 @@
 
 using System.Diagnostics.Contracts;
 
-namespace ManajemenNilai.Models;
+namespace Tubes_KPL.Models;
 
 public enum StatusKomplain { Pending, DiProses, Selesai, Ditolak }
 
