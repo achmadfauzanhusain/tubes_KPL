@@ -6,7 +6,7 @@
 using System.Data;
 using Microsoft.Data.Sqlite;
 
-namespace ManajemenNilai.Infrastructure;
+namespace Tubes_KPL.Infrastructure;
 
 /// <summary>
 /// Singleton database context menggunakan SQLite.
