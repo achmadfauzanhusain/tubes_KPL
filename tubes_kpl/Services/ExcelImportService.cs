@@ -2,9 +2,9 @@
 // Teknik: Parameterization/Generics - Salman Al Farizin
 // Generic importer yang bisa handle berbagai tipe data dari Excel
 
-using ManajemenNilai.Contracts;
-using ManajemenNilai.Infrastructure;
-using ManajemenNilai.Models;
+using Tubes_KPL.Contracts;
+using Tubes_KPL.Infrastructure;
+using Tubes_KPL.Models;
 using System.Diagnostics;
 
 namespace Tubes_KPL.Services;
