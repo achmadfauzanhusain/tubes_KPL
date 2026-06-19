@@ -1,3 +1,8 @@
+// Helpers/ValidationHelper.cs
+// Validasi Nilai
+// Teknik: Code Reuse/Library - Laksamana Dwi Daffa - Annisa Azzahra Putri - Nasywa Azalia Andrean
+//         (reusable validation library lintas fitur)
+
 using System;
 using System.Collections.Generic;
 using System.Text;
