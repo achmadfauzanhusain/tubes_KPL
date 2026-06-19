@@ -1,11 +1,14 @@
-﻿using System.Diagnostics.Contracts;
-using ManajemenNilai.Contracts;
-using ManajemenNilai.Infrastructure;
-using ManajemenNilai.Models;
+// FR-010: Komplain dan Konfirmasi Nilai
+// Teknik: Design by Contract (DbC) - Annisa Azzahra Putri
+
+using System.Diagnostics.Contracts;
+using Tubes_KPL.Contracts;
+using Tubes_KPL.Infrastructure;
+using Tubes_KPL.Models;
 using Tubes_KPL.Contracts;
 using Tubes_KPL.Models;
 
-namespace ManajemenNilai.Services;
+namespace Tubes_KPL.Services;
 
 public class KomplainService : IKomplainService
 {
