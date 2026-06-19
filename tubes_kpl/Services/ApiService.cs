@@ -1,4 +1,8 @@
-﻿using System.Net.Http.Headers;
+// REST API Layer untuk integrasi sistem eksternal
+// Teknik: API - Achmad Fauzan Husain
+// FR-008: Hak Akses Nilai via API
+
+using System.Net.Http.Headers;
 using System.Text;
 using Tubes_KPL.Contracts;
 using Tubes_KPL.Models;
