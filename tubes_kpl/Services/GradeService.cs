@@ -74,7 +74,6 @@ public class GradeService : IGradeService
             var list = new List<MataKuliah>();
             using var conn = DatabaseContext.Instance.GetConnection();
             using var cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT * FROM MataKuliah WHERE DosenId = @id";
             AddParam(cmd, "@id", dosenId);
             using var r = cmd.ExecuteReader();
             while (r.Read())
@@ -91,10 +90,6 @@ public class GradeService : IGradeService
             var list = new List<MataKuliah>();
             using var conn = DatabaseContext.Instance.GetConnection();
             using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                SELECT mk.* FROM MataKuliah mk
-                JOIN Users u ON mk.Kelas = u.Kelas
-                WHERE u.Id = @id";
             AddParam(cmd, "@id", mahasiswaId);
             using var r = cmd.ExecuteReader();
             while (r.Read())
@@ -126,10 +121,6 @@ public class GradeService : IGradeService
             var list = new List<NilaiMahasiswa>();
             using var conn = DatabaseContext.Instance.GetConnection();
             using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                SELECT nm.* FROM NilaiMahasiswa nm
-                JOIN GradeComponents gc ON nm.KomponenId = gc.Id
-                WHERE nm.MahasiswaId = @mhs AND gc.MataKuliahId = @mk AND gc.IsPublished = 1";
             AddParam(cmd, "@mhs", mahasiswaId);
             AddParam(cmd, "@mk", mkId);
             using var r = cmd.ExecuteReader();
@@ -147,14 +138,6 @@ public class GradeService : IGradeService
         {
             using var conn = DatabaseContext.Instance.GetConnection();
             using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                SELECT nm.Nilai, gc.Bobot, gc.IsPublished, mk.Nama as MkNama,
-                       u.Nama as MhsNama, u.NIM_NIP
-                FROM NilaiMahasiswa nm
-                JOIN GradeComponents gc ON nm.KomponenId = gc.Id
-                JOIN MataKuliah mk ON gc.MataKuliahId = mk.Id
-                JOIN Users u ON nm.MahasiswaId = u.Id
-                WHERE nm.MahasiswaId = @mhs AND gc.MataKuliahId = @mk AND gc.IsPublished = 1";
             AddParam(cmd, "@mhs", mahasiswaId);
             AddParam(cmd, "@mk", mkId);
 
@@ -214,11 +197,6 @@ public class GradeService : IGradeService
         {
             using var conn = DatabaseContext.Instance.GetConnection();
             using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                INSERT INTO NilaiMahasiswa (MahasiswaId, KomponenId, Nilai, Keterangan, EnteredById)
-                VALUES (@mhs, @komp, @nilai, @ket, @by)
-                ON CONFLICT(MahasiswaId, KomponenId) DO UPDATE SET
-                    Nilai = @nilai, Keterangan = @ket, EnteredAt = datetime('now')";
             AddParam(cmd, "@mhs", nilai.MahasiswaId);
             AddParam(cmd, "@komp", nilai.KomponenId);
             AddParam(cmd, "@nilai", nilai.Nilai);
@@ -239,10 +217,6 @@ public class GradeService : IGradeService
         {
             using var conn = DatabaseContext.Instance.GetConnection();
             using var cmd = conn.CreateCommand();
-            cmd.CommandText = @"
-                UPDATE GradeComponents
-                SET IsPublished = 1, PublishedAt = datetime('now')
-                WHERE Id = @id";
             AddParam(cmd, "@id", komponenId);
             bool ok = cmd.ExecuteNonQuery() > 0;
 
@@ -250,13 +224,6 @@ public class GradeService : IGradeService
             {
                 // Kirim notifikasi ke semua mahasiswa
                 using var notifCmd = conn.CreateCommand();
-                notifCmd.CommandText = @"
-                    INSERT INTO Notifikasi (UserId, Judul, Pesan, Kategori)
-                    SELECT u.Id,
-                           'Nilai Baru Dipublikasikan',
-                           'Dosen telah mempublikasikan komponen nilai baru. Silakan cek nilai Anda.',
-                           'Nilai'
-                    FROM Users u WHERE u.Role = 1 AND u.IsActive = 1";
                 notifCmd.ExecuteNonQuery();
             }
             return ok;
@@ -268,7 +235,6 @@ public class GradeService : IGradeService
         var hasil = new List<HasilAkhir>();
         using var conn = DatabaseContext.Instance.GetConnection();
         using var cmd = conn.CreateCommand();
-        cmd.CommandText = "SELECT DISTINCT MahasiswaId FROM NilaiMahasiswa nm JOIN GradeComponents gc ON nm.KomponenId = gc.Id WHERE gc.MataKuliahId = @mk";
         AddParam(cmd, "@mk", mkId);
 
         var ids = new List<int>();
