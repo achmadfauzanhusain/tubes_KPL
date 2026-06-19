@@ -1,4 +1,7 @@
-﻿using System.Diagnostics.Contracts;
+// FR-010: Komplain dan Konfirmasi Nilai
+// Teknik: Design by Contract (DbC) - Annisa Azzahra Putri
+
+using System.Diagnostics.Contracts;
 
 namespace ManajemenNilai.Models;
 
