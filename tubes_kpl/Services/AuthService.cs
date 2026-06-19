@@ -1,4 +1,8 @@
-﻿using Tubes_KPL.Contracts;
+// FR-009: Akses Login Pengguna (SSO)
+// Teknik: AUTOMATA - Achmad Fauzan Husain
+// State machine untuk alur autentikasi pengguna
+
+using Tubes_KPL.Contracts;
 using Tubes_KPL.Infrastructure;
 using Tubes_KPL.Models;
 using System.Data;
@@ -11,7 +15,6 @@ namespace Tubes_KPL.Services;
 /// </summary>
 public class AuthService : IAuthService
 {
-    // === AUTOMATA: States ===
     public enum AuthState
     {
         Idle,           // Belum login
