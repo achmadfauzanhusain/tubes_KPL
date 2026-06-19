@@ -1,4 +1,3 @@
-
 // Services/GradeService.cs
 // FR-002: Pengelolaan Komponen Nilai
 // FR-004: Validasi Nilai
@@ -8,7 +7,6 @@
 // Teknik: Table-Driven Construction - Muhammad Aditya Arham
 //         Design by Contract (DbC) - validasi input
 
-
 using ManajemenNilai.Contracts;
 using ManajemenNilai.Infrastructure;
 using ManajemenNilai.Models;
@@ -17,14 +15,12 @@ using System.Diagnostics.Contracts;
 using Tubes_KPL.Contracts;
 using Tubes_KPL.Models;
 
-namespace ManajemenNilai.Services;
+namespace Tubes_KPL.Services;
 
 public class GradeService : IGradeService
 {
-    
     // TABLE-DRIVEN: Tabel bobot minimum per tipe komponen
     // Data dikonfigurasi sebagai tabel, bukan hardcoded di logika
-    
     private static readonly Dictionary<KomponenType, (double MinBobot, double MaxBobot, string Description)>
         KomponenRules = new()
         {
