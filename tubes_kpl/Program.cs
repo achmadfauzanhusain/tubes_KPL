@@ -1,9 +1,9 @@
 // Program.cs - Entry Point Utama - Achmad Fauzan Husain
 // Sistem Manajemen Nilai - Telkom University
 
-using ManajemenNilai.Forms;
-using ManajemenNilai.Infrastructure;
-using ManajemenNilai.Services;
+using Tubes_KPL.Forms;
+using Tubes_KPL.Infrastructure;
+using Tubes_KPL.Services;
 using Tubes_KPL;
 
 namespace Tubes_KPL;
