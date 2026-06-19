@@ -1,22 +1,14 @@
-﻿// ============================================================
-// Services/ExcelImportService.cs
-// FR-003: Sinkronisasi dan Impor Nilai dari Excel
+﻿// FR-003: Sinkronisasi dan Impor Nilai dari Excel
 // Teknik: Parameterization/Generics - Salman Al Farizin
 // Generic importer yang bisa handle berbagai tipe data dari Excel
-// ============================================================
 
 using ManajemenNilai.Contracts;
 using ManajemenNilai.Infrastructure;
 using ManajemenNilai.Models;
 using System.Diagnostics;
 
-namespace ManajemenNilai.Services;
+namespace Tubes_KPL.Services;
 
-/// <summary>
-/// Generic Excel column mapping definition.
-/// Teknik Generics: ExcelColumnMap<T> dapat digunakan untuk
-/// berbagai model (NilaiMahasiswa, User, MataKuliah, dll).
-/// </summary>
 public class ExcelColumnMap<T>
 {
     public string ColumnHeader { get; set; } = string.Empty;
